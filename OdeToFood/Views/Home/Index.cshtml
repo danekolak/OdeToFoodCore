@@ -1,0 +1,19 @@
+﻿@model IEnumerable<OdeToFood.Models.Restaurant>;
+@{
+    ViewData["Title"] = "Index";
+}
+<h2>Index</h2>
+@foreach (var item in Model)
+{
+    @*<h3>My restaurant name is: @item.Name with ID: @item.Id with charse name: @item.CharsName </h3>
+        <h2>People with @item.CharsName in Restaurant are: @item.FirstName @item.LastName with ID: @item.Id </h2>
+        <p>People with in Restaurant are: @item.FirstName @item.LastName with ID: @item.Id </p>*@
+
+    <h3>@item.Id</h3>
+    <h3>@item.Name</h3>
+    <h3>@item.FirstName</h3>
+    <h3>@item.LastName</h3>
+    <h3>@item.CharsName</h3>
+
+}
+<p>The numbers of chars in restaurant @Html.ActionLink("Chars", "NumbersOfChar")</p>

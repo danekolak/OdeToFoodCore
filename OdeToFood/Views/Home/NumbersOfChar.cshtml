@@ -1,0 +1,10 @@
+﻿@model IEnumerable<OdeToFood.Models.Restaurant>
+
+@{
+    ViewData["Title"] = "NumbersOfChar";
+}
+<h2>NumbersOfChar</h2>
+@foreach (var item in Model)
+{
+    <h3>CharSet: @item.CharsName</h3>
+}
