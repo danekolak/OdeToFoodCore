@@ -1,5 +1,6 @@
 ﻿using OdeToFood.Models;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace OdeToFood.Services
 {
@@ -19,6 +20,7 @@ namespace OdeToFood.Services
         List<Restaurant> _people;
 
         public IEnumerable<Restaurant> GetAllPeople() => _people;
+        public Restaurant GetPeopleId(int id) => _people.FirstOrDefault(p => p.Id == id);
 
     }
 }
